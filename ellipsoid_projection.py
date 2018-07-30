@@ -40,15 +40,9 @@ def getXYZProjection(n, ellipse):
 
 def plotEllipse(n, ellipse, subplot):
     center, Sigma, angle = getXYProjection(n, ellipse)
-    print "Center: ", center
-    print "Sigma: ", Sigma
-    print "angle: ", angle
     e = Ellipse(center, 2*Sigma[0], 2*Sigma[1], angle, fill=False)
     subplot.add_patch(e)
 
 def plotEllipsoid3D(n, ellipse, subplot):
     center, Sigma, rotation = getXYZProjection(n, ellipse)
-    print "Center: ", center
-    print "Sigma: ", Sigma
-    #print "rotation: ", rotation
     ellipsoid_tool.plotEllipsoid(center, Sigma, rotation, subplot, cageColor='k')

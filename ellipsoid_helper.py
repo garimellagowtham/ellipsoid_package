@@ -6,6 +6,10 @@ from collections import namedtuple
 
 Ellipsoid = namedtuple('Ellipsoid', 'center, principal_axes, radii')
 
+def findEllipsoid(mu, Sigma):
+    w, v = np.linalg.eigh(Sigma)
+    return Ellipsoid(mu, v.T, w)
+
 def normalize(v):
     norm=np.linalg.norm(v)
     if norm<1e-6:
