@@ -1,7 +1,6 @@
 #!/usr/bin/env python2
 from matplotlib.patches import Ellipse
 from ellipsoid_tool import EllipsoidTool
-from ellipsoid_helper import Ellipsoid
 import numpy as np
 
 
